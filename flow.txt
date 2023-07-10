@@ -1,0 +1,12 @@
+- simulation/
+  - simulation.py
+  - village.py
+- ui/
+  - index.html
+  - style.css
+  - main.js
+- .github/
+  - workflows/
+    - build.yml
+- README.md
+- requirements.txt
