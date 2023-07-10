@@ -170,6 +170,8 @@ class Village:
 male_names = ["John", "Michael", "William", "David", "James", "Robert", "Joseph", "Daniel", "Richard", "Thomas", "Charles", "Matthew", "Christopher", "Andrew", "Joshua", "Anthony", "Mark", "Paul", "Steven", "Kevin", "Brian", "George", "Edward", "Donald", "Ronald", "Kenneth", "Steven", "Larry", "Jeffrey", "Frank", "Scott", "Eric", "Stephen"]
 female_names = ["Mary", "Jennifer", "Linda", "Patricia", "Susan", "Nancy", "Lisa", "Karen", "Donna", "Michelle", "Sandra", "Jessica", "Helen", "Emily", "Amanda", "Sarah", "Melissa", "Ashley", "Kimberly", "Elizabeth", "Mary", "Sharon", "Laura", "Amy", "Stephanie", "Rebecca", "Carol", "Cynthia", "Angela", "Patricia"]
 
+from village import Village #Import the Village from village.py
+
 # Creating initial entities with unique names
 entity1 = Entity(position=(0, 0), gender="male", name=village.get_unique_name("male"))
 entity2 = Entity(position=(2, 3), gender="female", name=village.get_unique_name("female"))
