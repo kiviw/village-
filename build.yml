@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build and Test Simulation
+        run: python simulation.py
+
+      - name: Build User Interface
+        run: |
+          # Add commands here to build or bundle your user interface
+          # For example, you might use a build tool like webpack or a bundler like Parcel
+
+      - name: Deploy User Interface
+        uses: some-deployment-action # Specify the action or command to deploy your user interface
+        with:
+          # Specify the necessary deployment configurations and credentials
+
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: simulation.py  # Adjust the path to include any other necessary files
+          
