@@ -1,5 +1,3 @@
-import random
-
 class Village:
     def __init__(self):
         self.entities = []
@@ -92,35 +90,4 @@ class Village:
                 name = random.choice(female_names)
         self.used_names.add(name)
         return name
-
-# List of male and female names for entity naming
-male_names = ["John", "Michael", "William", "David", "James","Robert", "Joseph", "Daniel", "Richard", "Thomas", "Charles", "Matthew", "Christopher", "Andrew", "Joshua", "Anthony", "Mark", "Paul", "Steven", "Kevin", "Brian", "George", "Edward", "Donald", "Ronald", "Kenneth", "Steven", "Larry", "Jeffrey", "Frank", "Scott", "Eric", "Stephen"]
-female_names = ["Mary", "Jennifer", "Linda", "Patricia", "Susan", "Nancy", "Lisa", "Karen", "Donna", "Michelle", "Sandra", "Jessica", "Helen", "Emily", "Amanda", "Sarah", "Melissa", "Ashley", "Kimberly", "Elizabeth", "Mary", "Sharon", "Laura", "Amy", "Stephanie", "Rebecca", "Carol", "Cynthia", "Angela", "Patricia"]
-
-# Creating initial entities with unique names
-entity1 = Entity(position=(0, 0), gender="male", name=village.get_unique_name("male"))
-entity2 = Entity(position=(2, 3), gender="female", name=village.get_unique_name("female"))
-entity3 = Entity(position=(4, 1), gender="male", name=village.get_unique_name("male"))
-entity4 = Entity(position=(3, 2), gender="female", name=village.get_unique_name("female"))
-
-# Creating a village
-village = Village()
-village.add_entity(entity1)
-village.add_entity(entity2)
-village.add_entity(entity3)
-village.add_entity(entity4)
-
-# Assigning names to founding individuals
-entity1.name = "Dave"
-entity2.name = "Rita"
-entity3.name = "Jimmy"
-entity4.name = "Sharon"
-
-# Marrying entities
-entity1.marry(entity2)
-entity3.marry(entity4)
-
-# Simulating the village for 100 years (30 days = 1 year in village time)
-for _ in range(100):
-    village.simulate()
-      
+                   
