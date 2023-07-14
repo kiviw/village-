@@ -79,10 +79,16 @@ class Entity:
         return f"Entity ({self.gender}) at position {self.position}"
 
 # Creating initial entities with unique names
-entity1 = Entity(position=(0, 0), gender="male", name=random.choice(male_names))
-entity2 = Entity(position=(2, 3), gender="female", name=random.choice(female_names))
-entity3 = Entity(position=(4, 1), gender="male", name=random.choice(male_names))
-entity4 = Entity(position=(3, 2), gender="female", name=random.choice(female_names))
+entity1 = Entity(position=(0, 0), gender="male")
+entity2 = Entity(position=(2, 3), gender="female")
+entity3 = Entity(position=(4, 1), gender="male")
+entity4 = Entity(position=(3, 2), gender="female")
+
+# Assigning names to founding individuals
+entity1.name = "Dave"
+entity2.name = "Rita"
+entity3.name = "Jimmy"
+entity4.name = "Sharon"
 
 # Creating a village
 village = Village()
@@ -90,12 +96,6 @@ village.add_entity(entity1)
 village.add_entity(entity2)
 village.add_entity(entity3)
 village.add_entity(entity4)
-
-# Assigning names to founding individuals
-entity1.name = "Dave"
-entity2.name = "Rita"
-entity3.name = "Jimmy"
-entity4.name = "Sharon"
 
 # Marrying entities
 entity1.marry(entity2)
